@@ -1,321 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higher Secondary Examination Result 2026</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            padding: 10px;
-            color: #000000;
-            line-height: 1.4;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #ffffff;
-            border: 2px solid #000000;
-        }
-        .header {
-            text-align: center;
-            padding: 20px 15px;
-            border-bottom: 2px solid #000000;
-            background: #ffffff;
-        }
-        .header h1 {
-            font-size: clamp(16px, 4vw, 22px);
-            font-weight: bold;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-        .header p {
-            font-size: clamp(12px, 3vw, 14px);
-            margin-bottom: 5px;
-        }
-        .header h2 {
-            font-size: clamp(14px, 3.5vw, 18px);
-            font-weight: bold;
-            margin-top: 12px;
-            text-transform: uppercase;
-        }
-        .student-info {
-            margin: 20px 15px;
-        }
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: clamp(12px, 3vw, 15px);
-        }
-        .info-table td {
-            padding: 10px 8px;
-            border: 1px solid #000000;
-            vertical-align: top;
-        }
-        .info-table td:first-child {
-            font-weight: bold;
-            width: 35%;
-            background-color: #f8f8f8;
-        }
-        .marks-section {
-            margin: 20px 15px;
-            overflow-x: auto;
-        }
-        .marks-table {
-            width: 100%;
-            min-width: 700px;
-            border-collapse: collapse;
-            font-size: clamp(11px, 2.5vw, 13px);
-        }
-        .marks-table th {
-            font-weight: bold;
-            padding: 12px 6px;
-            border: 1px solid #000000;
-            text-align: center;
-            background-color: #f8f8f8;
-            text-transform: uppercase;
-        }
-        .marks-table td {
-            padding: 10px 6px;
-            border: 1px solid #000000;
-            text-align: center;
-        }
-        .summary {
-            margin: 20px 15px;
-        }
-        .summary-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: clamp(12px, 3vw, 15px);
-        }
-        .summary-table td {
-            padding: 10px 8px;
-            border: 1px solid #000000;
-        }
-        .summary-table td:first-child {
-            font-weight: bold;
-            width: 45%;
-            background-color: #f8f8f8;
-        }
-        .pass {
-            font-weight: bold;
-        }
-        .fail {
-            font-weight: bold;
-        }
-        .absent {
-            font-weight: bold;
-        }
-        .footer {
-            margin: 20px 15px;
-            padding-top: 15px;
-            border-top: 1px solid #000000;
-            font-size: clamp(11px, 2.5vw, 13px);
-        }
-        .footer p {
-            margin-bottom: 8px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HS Exam Result 2026</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 8px;
+      background: #f0f8ff;
+      font-family: Arial, sans-serif;
+      color: #333;
+    "
+  >
+    <div
+      style="
+        max-width: 900px;
+        margin: 0 auto;
+        background: e5eaef;
+        border: 2px solid #64006d;
+        position: relative;
+      "
+    >
+      <!-- Watermark -->
+      <img
+        src="./favicon.png"
+        alt="logo"
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0.1;
+          height: 250px;
+          width: 250px;
+          object-fit: contain;
+        "
+      />
+      <!-- Header -->
+      <div
+        style="
+          text-align: center;
+          padding: 12px;
+          border-bottom: 2px solid #1a237e;
+        "
+      >
+        <img
+          src="./favicon.png"
+          alt="logo"
+          style="height: 60px; margin-bottom: 15px"
+        />
+        <h1 style="font-size: 16px; font-weight: bold; margin: 0 0 4px 0">
+          WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION
+        </h1>
+        <p style="font-size: 11px; margin: 0 0 3px 0">
+          VIDYASAGAR BHAVAN, 9/2, Block-DJ, Sector-II, Salt Lake, Kolkata-700091
+        </p>
+        <h2 style="font-size: 13px; font-weight: bold; margin: 6px 0 0 0">
+          Statement of Marks for Higher Secondary Examination 2026
+          (Semester-III)
+        </h2>
+      </div>
 
-        /* Mobile specific styles */
-        @media (max-width: 768px) {
-            .container {
-                border: 1px solid #000000;
-            }
-            .header {
-                padding: 15px 10px;
-            }
-            .student-info, .marks-section, .summary {
-                margin: 15px 10px;
-            }
-            .info-table td, .summary-table td {
-                padding: 8px 6px;
-            }
-            .marks-table {
-                font-size: 11px;
-            }
-            .marks-table th, .marks-table td {
-                padding: 8px 4px;
-            }
-        }
+      <!-- Student Info -->
+      <div style="margin: 12px">
+        <table style="width: 100%; border-collapse: collapse; font-size: 11px">
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
+                width: 35%;
+              "
+            >
+              Candidate Name
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc">John Doe</td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
+              "
+            >
+              Roll No.
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc">WB202600123</td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
+              "
+            >
+              Registration No.
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc">WBHS202612345</td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
+              "
+            >
+              Institution Code
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc">SCH001</td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
+              "
+            >
+              Institution Name
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc">
+              St. Xavier's High School, Kolkata
+            </td>
+          </tr>
+        </table>
+      </div>
 
-        @media (max-width: 480px) {
-            body {
-                padding: 5px;
-            }
-            .info-table td:first-child {
+      <!-- Marks Table -->
+      <div style="margin: 12px; overflow-x: auto">
+        <table
+          style="
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            font-size: 10px;
+          "
+        >
+          <thead>
+            <tr style="background: #1a237e; color: white">
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Type
+              </th>
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Code
+              </th>
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Full
+              </th>
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Pass
+              </th>
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Obtained
+              </th>
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                %
+              </th>
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Percentile
+              </th>
+              <th
+                style="
+                  padding: 6px 4px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Result
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">
+                Language-A
+              </td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">BNGA</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">40</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">12</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">20</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">50</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">70.395</td>
+              <td
+                style="
+                  padding: 5px 4px;
+                  border: 1px solid #ccc;
+                  color: #2e7d32;
+                  font-weight: bold;
+                "
+              >
+                PASS
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">
+                Language-B
+              </td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">ENGB</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">40</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">12</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">20</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">50</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">60.354</td>
+              <td
+                style="
+                  padding: 5px 4px;
+                  border: 1px solid #ccc;
+                  color: #2e7d32;
+                  font-weight: bold;
+                "
+              >
+                PASS
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">
+                Compulsory Elective 1
+              </td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">PHYS</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">35</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">11</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">11</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">31.43</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">45</td>
+              <td
+                style="
+                  padding: 5px 4px;
+                  border: 1px solid #ccc;
+                  color: #2e7d32;
+                  font-weight: bold;
+                "
+              >
+                PASS
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">
+                Compulsory Elective 2
+              </td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">CHEM</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">35</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">11</td>
+              <td
+                style="
+                  padding: 5px 4px;
+                  border: 1px solid #ccc;
+                  color: #c62828;
+                  font-weight: bold;
+                "
+              >
+                AB
+              </td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">0</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">N.A</td>
+              <td
+                style="
+                  padding: 5px 4px;
+                  border: 1px solid #ccc;
+                  color: #c62828;
+                  font-weight: bold;
+                "
+              >
+                FAIL
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">
+                Compulsory Elective 3
+              </td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">MATH</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">35</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">11</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">30</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">85.71</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">50</td>
+              <td
+                style="
+                  padding: 5px 4px;
+                  border: 1px solid #ccc;
+                  color: #2e7d32;
+                  font-weight: bold;
+                "
+              >
+                PASS
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">
+                Optional Elective
+              </td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">BIOS</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">35</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">11</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">5</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">14.29</td>
+              <td style="padding: 5px 4px; border: 1px solid #ccc">5.359</td>
+              <td
+                style="
+                  padding: 5px 4px;
+                  border: 1px solid #ccc;
+                  color: #c62828;
+                  font-weight: bold;
+                "
+              >
+                FAIL
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Summary -->
+      <div style="margin: 12px">
+        <table style="width: 100%; border-collapse: collapse; font-size: 11px">
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
                 width: 40%;
-            }
-            .marks-table {
-                min-width: 650px;
-                font-size: 10px;
-            }
-            .marks-table th, .marks-table td {
-                padding: 6px 3px;
-            }
-        }
+              "
+            >
+              Marks Obtained
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc">
+              <strong>81</strong> out of Total Marks: <strong>185</strong>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
+              "
+            >
+              Overall Percentage
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc">
+              <strong>43.78%</strong>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 6px;
+                border: 1px solid #ccc;
+                background: #e3f2fd;
+                font-weight: bold;
+              "
+            >
+              Supplementary Examinations
+            </td>
+            <td style="padding: 6px; border: 1px solid #ccc; color: #c62828">
+              <strong>CHEM, BIOS (Optional)</strong>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-        /* Print styles */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-                margin: 0;
-            }
-            .container {
-                border: 1px solid #000000;
-                box-shadow: none;
-                margin: 0;
-                max-width: none;
-            }
-            .marks-table {
-                min-width: auto;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION</h1>
-            <p>VIDYASAGAR BHAVAN, 9/2, Block-DJ, Sector-II, Salt Lake, Kolkata-700091</p>
-            <h2>Statement of Marks for Higher Secondary Examination 2026 (Semester-III)</h2>
-        </div>
-
-        <!-- Student Information -->
-        <div class="student-info">
-            <table class="info-table">
-                <tr>
-                    <td>Candidate Name</td>
-                    <td>John Doe</td>
-                </tr>
-                <tr>
-                    <td>Roll No.</td>
-                    <td>WB202600123</td>
-                </tr>
-                <tr>
-                    <td>Registration No.</td>
-                    <td>WBHS202612345</td>
-                </tr>
-                <tr>
-                    <td>Institution Code</td>
-                    <td>SCH001</td>
-                </tr>
-                <tr>
-                    <td>Institution Name</td>
-                    <td>St. Xavier's High School, Kolkata</td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- Marks Table -->
-        <div class="marks-section">
-            <table class="marks-table">
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Subject Code</th>
-                        <th>Full Marks</th>
-                        <th>Pass Marks</th>
-                        <th>Marks Obtained</th>
-                        <th>Subject %</th>
-                        <th>Percentile</th>
-                        <th>Result</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Language-A</td>
-                        <td>BNGA</td>
-                        <td>40</td>
-                        <td>12</td>
-                        <td>20</td>
-                        <td>50</td>
-                        <td>70.395</td>
-                        <td class="pass">PASS</td>
-                    </tr>
-                    <tr>
-                        <td>Language-B</td>
-                        <td>ENGB</td>
-                        <td>40</td>
-                        <td>12</td>
-                        <td>20</td>
-                        <td>50</td>
-                        <td>60.354</td>
-                        <td class="pass">PASS</td>
-                    </tr>
-                    <tr>
-                        <td>Compulsory Elective 1</td>
-                        <td>PHYS</td>
-                        <td>35</td>
-                        <td>11</td>
-                        <td>11</td>
-                        <td>31.43</td>
-                        <td>45</td>
-                        <td class="pass">PASS</td>
-                    </tr>
-                    <tr>
-                        <td>Compulsory Elective 2</td>
-                        <td>CHEM</td>
-                        <td>35</td>
-                        <td>11</td>
-                        <td class="absent">AB</td>
-                        <td>0</td>
-                        <td>N.A</td>
-                        <td class="fail">FAIL</td>
-                    </tr>
-                    <tr>
-                        <td>Compulsory Elective 3</td>
-                        <td>MATH</td>
-                        <td>35</td>
-                        <td>11</td>
-                        <td>30</td>
-                        <td>85.71</td>
-                        <td>50</td>
-                        <td class="pass">PASS</td>
-                    </tr>
-                    <tr>
-                        <td>Optional Elective</td>
-                        <td>BIOS</td>
-                        <td>35</td>
-                        <td>11</td>
-                        <td>5</td>
-                        <td>14.29</td>
-                        <td>5.359</td>
-                        <td class="fail">FAIL</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Summary Section -->
-        <div class="summary">
-            <table class="summary-table">
-                <tr>
-                    <td>Marks Obtained</td>
-                    <td><strong>81</strong> out of Total Marks: <strong>185</strong></td>
-                </tr>
-                <tr>
-                    <td>Overall Percentage</td>
-                    <td><strong>43.78%</strong></td>
-                </tr>
-                <tr>
-                    <td>Supplementary Examinations</td>
-                    <td><strong>CHEM, BIOS (Optional)</strong></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- Footer Note -->
-        <div class="footer">
-            <p><strong>Note:</strong> Marks in Optional Elective has not been included in calculation of Marks Obtained and Total Marks for Semester-III</p>
-        </div>
+      <!-- Footer -->
+      <div
+        style="
+          margin: 12px;
+          padding-top: 8px;
+          border-top: 1px solid #ccc;
+          font-size: 10px;
+          color: #666;
+        "
+      >
+        <p style="margin: 0 0 4px 0">
+          <strong>Note:</strong> Marks in Optional Elective has not been
+          included in calculation of Marks Obtained and Total Marks for
+          Semester-III
+        </p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
